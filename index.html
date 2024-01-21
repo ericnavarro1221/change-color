@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity 3</title>
+    <style>
+        body {
+            background-position: center;
+            background-size: cover;
+            display: flex; 
+            justify-content: center;
+            margin: 0;
+            height: 100vh;
+            align-items: center;
+            background: linear-gradient(to right, purple 0%, rgb(182, 9, 9) 90%);
+        }
+        #color{
+            background-color: rgb(15, 207, 15);
+            width: 300px;
+            height: 300px;
+            padding: 50px;
+            display: flex;
+            border: 2px solid #000;
+            border-radius: 20px;
+        }
+        .color{
+            background-color: rgb(12, 12, 199);
+            width: 100px;
+            height: 20px;
+            padding: 20px;
+        }
+
+        button {
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        letter-spacing: 1px;
+        background: linear-gradient(to right, purple 10%, yellow 90%);
+        text-transform: uppercase;
+        display: inline;
+        border-radius: 50px;
+        position: absolute;
+        bottom: 1000x;
+        width: 150px;
+        height: 80px;
+        clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
+        }
+
+        button:hover {
+        background: linear-gradient(purple 10%, red 90%);
+        transition-duration: .5s;
+        transform: rotate(720deg);
+        clip-path: polygon(40% 0%, 40% 20%, 100% 20%, 100% 80%, 40% 80%, 40% 100%, 0% 50%);
+        }
+    </style>
+</head>
+<body>
+    <div id="color">
+    </div>
+    <button id="btn">Change Color</button>
+
+    <script>
+        let colorBox = document.getElementById("color"); 
+        let btn = document.getElementById("btn");
+
+        btn.addEventListener("click", changeColor);
+        colorBox.style.backgroundColor = 'green';
+
+        function changeColor(){
+            if (colorBox.style.backgroundColor === "green"){
+                colorBox.style.backgroundColor = 'blue';
+            } else {
+                colorBox.style.backgroundColor = "green";
+            }
+        }
+    </script>
+</body>
+</html>
